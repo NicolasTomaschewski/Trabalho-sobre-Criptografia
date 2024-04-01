@@ -64,6 +64,7 @@ int main() {
 
     switch (choice) {
         case 1:	
+            printf("Cifra de César: A cifra de César é um método de criptografia simples que consiste em deslocar as letras do alfabeto por um número fixo de posições. Por exemplo, se o deslocamento for de três posições, a letra A seria substituída pela letra D, B pela letra E, e assim por diante. Esse processo é denominado 'cifração' e pode ser revertido através da 'decifração', que consiste em desfazer o deslocamento para revelar a mensagem original. É uma das técnicas mais antigas de criptografia, atribuída a Júlio César, que a teria usado para enviar mensagens secretas durante suas campanhas militares. Apesar de ser facilmente quebrável por métodos computacionais modernos, a cifra de César é útil para fins didáticos e para demonstrar os princípios básicos da criptografia.\n");
             printf("Digite a chave de cifra (um número inteiro): ");
             scanf("%d", &keyInt);
             encryptCaesar(message, keyInt);
