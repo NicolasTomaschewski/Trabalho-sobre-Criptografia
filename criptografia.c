@@ -71,7 +71,7 @@ int main() {
             printf("Mensagem cifrada usando Cifra de César: %s\n", message);
             break;
         case 2:
-	        printf("Explicação sobre a ");
+	        printf("Cifra de Vernam-Mauborgne: A cifra de Vernam-Mauborgne, também conhecida como One-Time Pad (OTP), é um sistema de criptografia que utiliza uma chave secreta aleatória do mesmo tamanho que a mensagem a ser codificada. Cada letra da mensagem é combinada com a letra correspondente da chave utilizando operações de ou exclusivo (XOR). Esse processo gera uma mensagem cifrada que é praticamente impossível de ser quebrada se a chave for usada corretamente e mantida em segredo. O principal ponto forte da cifra de Vernam-Mauborgne é sua segurança inigualável, desde que a chave seja verdadeiramente aleatória, usada apenas uma vez (daí o nome One-Time Pad) e mantida em sigilo absoluto. No entanto, o desafio prático reside na geração e distribuição segura das chaves, o que a torna menos viável para muitas aplicações do mundo real.\n");
             printf("Digite a chave de cifra (uma string): ");
             scanf("%s", keyStr);
             encryptVernam(message, keyStr);
@@ -79,6 +79,7 @@ int main() {
             break;
         case 3:
             printf("Digite a chave de cifra (uma string): ");
+            printf("Cifra de Vigenère: A cifra de Vigenère é um método de criptografia polialfabético que utiliza uma palavra-chave para cifrar uma mensagem. O processo envolve a repetição da palavra-chave sobre o texto a ser cifrado, deslocando cada letra do texto original de acordo com a posição da letra correspondente na palavra-chave. Por exemplo, se a palavra-chave for 'CASA' e a mensagem for 'BOMDIA', a letra 'B' seria cifrada com 'C', 'O' com 'A', 'M' com 'S', 'D' com 'C', 'I' com 'A', e 'A' com 'A', resultando em uma mensagem cifrada. A cifra de Vigenère é mais segura do que a cifra de César porque envolve múltiplos deslocamentos, dificultando a quebra da criptografia por análise de frequência. No entanto, ela ainda pode ser quebrada com métodos de criptoanálise mais avançados, especialmente se a palavra-chave for curta ou previsível.\n");
             scanf("%s", keyStr);
             encryptVigenere(message, keyStr);
             printf("Mensagem cifrada usando Cifra de Vigenère: %s\n", message);
